@@ -19,7 +19,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # end
 
   config.vm.box = "centos64"
+  config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-i386-v20131103.box"
   config.vm.boot_timeout = 900
+  # config.vm.hostname = "hostname"
 
 #  config.vm.provider "virtualbox" do |vb|
     # Don't boot with headless mode
