@@ -18,10 +18,22 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   web.vm.box = "box-cutter/ubuntu1404"
   # end
 
-  config.vm.box = "centos64"
-  config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-i386-v20131103.box"
-  config.vm.boot_timeout = 900
-  # config.vm.hostname = "hostname"
+  config.vm.define "default" do |web|
+    web.vm.box = "centos64"
+    web.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-i386-v20131103.box"
+    web.vm.boot_timeout = 900
+    # web.vm.hostname = "hostname"
+
+
+    # web.vm.network :forwarded_port, guest:22, host:2001, id:"ssh"
+    # web.vm.network :forwarded_port, guest:80, host:8080, id:"http"
+    web.vm.network :private_network, ip: "192.168.50.11"
+  end
+
+#  config.vm.box = "centos64"
+#  config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-i386-v20131103.box"
+#  config.vm.boot_timeout = 900
+#  # config.vm.hostname = "hostname"
 
 #  config.vm.provider "virtualbox" do |vb|
     # Don't boot with headless mode
