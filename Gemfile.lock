@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/eagletmt/itamae-plugin-resource-iptables.git
+  revision: 1a8cb22fb88cb2e4c1da7ec9101b216020c0d086
+  specs:
+    itamae-plugin-resource-iptables (0.0.1)
+      itamae
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -45,5 +52,6 @@ PLATFORMS
 
 DEPENDENCIES
   itamae
+  itamae-plugin-resource-iptables!
   rake
   serverspec
