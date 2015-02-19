@@ -1,3 +1,4 @@
+package "epel-release"
 execute 'yum update ca-certificates' do
   command 'sudo yum update -y ca-certificates --disablerepo=epel'
 end

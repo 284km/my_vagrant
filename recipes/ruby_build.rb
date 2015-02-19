@@ -1,4 +1,4 @@
-package "epel-release"
+# package "epel-release"
 package "gcc"
 package "openssl-devel"
 package "libyaml-devel"
