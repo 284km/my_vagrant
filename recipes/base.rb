@@ -11,6 +11,9 @@ execute 'groupinstall' do
   command 'sudo yum groupinstall "Development Tools" -y'
 end
 
+package 'vim-enhanced'
+package "git"
+
 # yum -y install openssl openssl-devel readline-devel zlib-devel curl-devel libyaml-devel flex libxml2-devel zlib-devel libpng-devel libjpeg-devel libXpm-devel freetype freetype-devel
 
 # package 'openssl-devel'

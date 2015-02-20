@@ -4,7 +4,6 @@ package "openssl-devel"
 package "libyaml-devel"
 package "readline-devel"
 package "zlib-devel"
-package "git"
 
 RBENV_DIR = "/usr/local/rbenv"
 RBENV_SCRIPT = "/etc/profile.d/rbenv.sh"
